@@ -13,7 +13,7 @@ def main(a, b, c):
 	sum1 = amount[a] + amount[b] + amount[c]
 	for n1 in range(10):
 		for n2 in range(10):
-			if sum1 - amount[n1] - amount[n2] in amount is True:
+			if sum1 - amount[n1] - amount[n2] in amount:
 				thre = [amount[n1], amount[n2], sum1 - amount[n1] - amount[n2]]
 				three = thre.sort()
 				if three[2] - three[1] == three[0]:
