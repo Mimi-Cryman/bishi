@@ -2,19 +2,19 @@ import time
 
 
 
-tuple1 = ('1110111', '0010010', '0111101', '0111011', '1011010', '1101011', '1101111', '0110010', '1111111', '1111011')
-tuple2 = (6, 2, 5, 5, 4, 5, 6, 3, 7, 6)
+status = ('1110111', '0010010', '0111101', '0111011', '1011010', '1101011', '1101111', '0110010', '1111111', '1111011')
+amount = (6, 2, 5, 5, 4, 5, 6, 3, 7, 6)
 #123
 # 4
 #567
 def main(a, b, c):
 	result = []
 	source = [a, b, c]
-	sum1 = tuple2[a] + tuple2[b] + tuple2[c]
+	sum1 = amount[a] + amount[b] + amount[c]
 	for n1 in range(10):
 		for n2 in range(10):
-			if sum1 - tuple2[n1] - tuple2[n2] in tuple2 is True:
-				thre = [tuple2[n1], tuple2[n2], sum1 - tuple2[n1] - tuple2[n2]]
+			if sum1 - amount[n1] - amount[n2] in amount is True:
+				thre = [amount[n1], amount[n2], sum1 - amount[n1] - amount[n2]]
 				three = thre.sort()
 				if three[2] - three[1] == three[0]:
 					times = compare(source,thre)
@@ -37,7 +37,7 @@ def copmare(src,tgt):
 	m = 0
 	for m in range(3):
 		for n in range(7):
-			if not tuple1[src[m]][n] == tuple1[tgt[m]][n]:
+			if not status[src[m]][n] == status[tgt[m]][n]:
 				count += 1
 	if count % 2 == 0:
 		return count / 2
