@@ -33,14 +33,17 @@ def main(a, b, c):
 			print('最少移动', result[r][3],'根火柴棍，使得图案变为', result[r][0], '+', result[r][1], '=', result[r][2])
 
 def copmare(src,tgt):
-	count = 0
 	m = 0
+	zero, one = 0, 0
 	for m in range(3):
 		for n in range(7):
 			if not status[src[m]][n] == status[tgt[m]][n]:
-				count += 1
-	if count % 2 == 0:
-		return count / 2
+				if status[tgt[m]][n] == 0:
+					zero += 1
+				else:
+					one += 1
+	if zero == one:
+		return zero
 def input_check():
 	pass
 
